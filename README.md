@@ -26,13 +26,13 @@ Step 2: Login
 ![alt text](image/image-2.png)
 
 Step 3: Upload Profile Image
-![alt text](image-3.png)
+![alt text](image/image-3.png)
 
 Step 4: Create Recipe (with image)
-![alt text](image-4.png)
+![alt text](image/image-4.png)
 
 Step 5: Update Recipe
-![alt text](image-5.png)
+![alt text](image/image-5.png)
 
 Step 6: Delete Recipe
-![alt text](image-6.png)
+![alt text](image/image-6.png)
