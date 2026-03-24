@@ -31,7 +31,6 @@ const userSchema = new mongoose.Schema(
 );
 
 
-// ✅ FIXED PASSWORD HASHING (NO next() BUG)
 userSchema.pre("save", async function () {
   // only hash if password is modified
   if (!this.isModified("password")) return;
@@ -41,13 +40,11 @@ userSchema.pre("save", async function () {
 });
 
 
-// ✅ Compare password
 userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
 
-// ✅ Generate JWT token
 userSchema.methods.generateToken = function () {
   return jwt.sign(
     {
@@ -61,8 +58,6 @@ userSchema.methods.generateToken = function () {
   );
 };
 
-
-// ✅ Remove sensitive fields when sending response
 userSchema.methods.toJSON = function () {
   const obj = this.toObject();
   delete obj.password;

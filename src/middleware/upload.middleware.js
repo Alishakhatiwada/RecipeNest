@@ -23,4 +23,4 @@ const upload = multer({
   fileFilter,
 });
 
-module.exports = upload; // ✅ IMPORTANT (NOT upload.single)
+module.exports = upload; 

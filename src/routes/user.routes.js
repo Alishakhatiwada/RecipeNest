@@ -11,7 +11,7 @@ router.post("/login", userController.login);
 router.post(
   "/upload-profile",
   protect,
-  upload.single("profile"), // ✅ correct usage
+  upload.single("profile"),
   userController.uploadProfile
 );
 
